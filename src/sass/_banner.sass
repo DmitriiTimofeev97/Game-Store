@@ -1,0 +1,57 @@
+.banner
+    &-img
+        display: grid
+        grid-template-columns: repeat(17, 1fr)
+        grid-template-rows: repeat(24, 1fr)
+        grid-column: full-start / col-end 4
+        background-color: $color-blue-dark
+        background: url(../img/background.png) center / cover no-repeat
+        @include respond(tab-port)
+            grid-column: 1 / -1
+        &__img-1
+            width: 100%
+            grid-column: 3 / 15
+            grid-row: 3 / 12
+            z-index: 10
+            transition: .3s all
+            outline-offset: .5rem
+            backface-visibility: hidden
+            &:hover
+                outline: 1rem solid $color-green-dark
+                transform: scale(1.1)
+                z-index: 20
+            &:hover &__img-1:not(:hover)
+                transform: scale(.95)
+            @include respond(tab-port)
+                grid-column: 2 / 10
+            
+        &__img-2
+            width: 100%
+            grid-column: 5 / -1
+            grid-row: 10 / 23
+            transform: translateX(3.5rem)
+            z-index: 10
+            transition: .3s all
+            outline-offset: .5rem
+            backface-visibility: hidden
+            &:hover
+                outline: 1rem solid $color-green-dark
+                transform: scale(1.1)
+                z-index: 20
+            &:hover &__img-2:not(:hover)
+                transform: scale(.95)
+            @include respond(tab-port)
+                grid-column: 8 / 16
+    &-text
+        display: grid
+        align-content: center
+        justify-items: start
+        background-color: $color-blue-dark
+        grid-column: col-start 5 / full-end
+        padding: 0 4vw
+        @include respond(tab-port)
+            grid-column: 1 / -1
+            grid-row: 5 / 6
+            padding: 4rem
+        &__text
+            margin-bottom: 4rem

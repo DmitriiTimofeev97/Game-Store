@@ -1,0 +1,46 @@
+.cards
+    background-color: $color-gray-light
+    grid-column: center-start / center-end
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+    gap: 4rem 6rem
+    padding: 15rem 0
+    @include respond(phone)
+        padding: 5rem 0
+
+.card
+    background-color: $color-blue-dark
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    row-gap: 4.5rem
+    &__img
+        width: 100%
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+    &__title
+        width: 80%
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+        padding: 1.5rem 0
+        color: $color-gray-light
+        background-color: $color-green-dark
+        font-size: 1.6rem
+        font-weight: 700
+        text-align: center
+        justify-self: center
+        align-self: end
+        transform: translateY(50%)
+    &__btn
+        grid-column: 1 / -1
+    &__svg
+        width: 2rem
+        height: 2rem
+        margin-right: 1rem
+
+.content
+    display: flex
+    margin: 2rem 0 0 2rem
+    p
+        font-size: 1.6rem
+        font-weight: 300
+        color: $color-gray-light

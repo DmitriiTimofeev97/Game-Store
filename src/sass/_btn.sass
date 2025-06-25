@@ -1,0 +1,26 @@
+.btn
+    font-size: 1.6rem
+    font-weight: 700
+    text-transform: uppercase
+    color: $color-gray-light
+    background-color: $color-green-light
+    border: none
+    padding: 1.5rem 3rem
+    cursor: pointer
+    transition: .3s all
+    backface-visibility: hidden
+    &:hover
+        background-color: $color-green-dark
+
+.btn_up
+    animation-name: leftToRight
+    animation-duration: 1.7s
+    animation-delay: 0
+    animation-timing-function: ease
+    backface-visibility: hidden
+    &:hover, &:active
+        transform: translateY(-.3rem)
+
+.btn_scale
+    &:hover, &:active
+        transform: scale(1.05)
