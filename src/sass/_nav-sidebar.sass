@@ -1,3 +1,7 @@
+//Навигационное меню + гамбургер
+
+//Фоновый сайдбар для гамбургера
+
 .sidebar
     background-color: $color-green-dark
     grid-column: sidebar-start / sidebar-end
@@ -5,6 +9,8 @@
     @include respond(tab-land)
         grid-row: 1 / 2
         grid-column: 1 / -1
+
+//Контейнер для навигационного меню
 
 .nav-wrapper
     @include respond(tab-land)
@@ -14,6 +20,8 @@
         height: 8rem
         background-color: $color-green-dark
         z-index: 150
+
+//Начинка навигационного меню
 
 .nav
     &__nav, &__toggle, &__background
@@ -99,7 +107,8 @@
         top: -17px
     &__btn:hover &__icon::after
         top: 17px
-        
+
+//Навигационное меню в гамбургере
 
 .nav__list_hamburger
     display: flex
@@ -115,7 +124,8 @@
     @include respond(phone)
         top: 30%
         left: 25%
-    
+
+//Ссылки навигационного меню в гамбургере
 
 .nav__link_hamburger
     &:link, &:visited

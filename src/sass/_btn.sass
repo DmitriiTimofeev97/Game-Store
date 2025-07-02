@@ -1,3 +1,5 @@
+//Общий стиль кнопки
+
 .btn
     font-size: 1.6rem
     font-weight: 700
@@ -12,6 +14,8 @@
     &:hover
         background-color: $color-green-dark
 
+//Модификатор анимации подъема кнопки вверх
+
 .btn_up
     animation-name: leftToRight
     animation-duration: 1.7s
@@ -21,6 +25,29 @@
     &:hover, &:active
         transform: translateY(-.3rem)
 
+//Модификатор анимации увеличения кнопки
+
 .btn_scale
     &:hover, &:active
         transform: scale(1.05)
+
+//Кнопка прокрутки к началу страницы
+
+.scroll-to-top
+    display: none
+    position: fixed
+    width: 7rem
+    height: 7rem
+    bottom: 2rem
+    right: 2rem
+    padding: 0 1rem 2rem 1rem
+    font-size: 5rem
+    background-color: $color-green-dark
+    color: $color-gray-light
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    transition: .3s all
+    z-index: 500
+    &:hover
+        transform: scale(1.1)
